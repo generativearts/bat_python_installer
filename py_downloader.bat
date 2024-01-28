@@ -51,7 +51,7 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('%url%', '%installe
 
 REM Install Python with a spinner animation
 echo Installing Python...
-start /wait %installer% /quiet /passive TargetDir=%targetdir% Include_test=0 ^
+start /wait %installer% /quiet /passive TargetDir=%targetdir% InstallAllUsers=1 PrependPath=1 Include_test=0 ^
 && (echo Done.) || (echo Failed!)
 echo.
 
